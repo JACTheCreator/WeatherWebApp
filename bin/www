@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var app = require('../app');
+var http = require('http');
+
+var server = http.createServer(app);
+var port = process.env.PORT || 3000;
+
+server.listen(port, function() {
+  console.log('Local: http://localhost:' + server.address().port);
+});
+
+// server.listen(externalIP, port, function() {
+//   console.log('External: http://' + server.address().address + ':' + port);
+// });
+
+// app.set('localhost', process.env.PORT || 3000);
+
+// var localhost = app.listen(app.get('localhost'), function() {
+//   console.log(' Local: http://localhost:' + localhost.address().port);
+// });

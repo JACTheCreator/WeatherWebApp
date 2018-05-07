@@ -1,0 +1,5 @@
+node_modules/
+src/vendor
+.nyc_output
+.sass-cache
+.env
